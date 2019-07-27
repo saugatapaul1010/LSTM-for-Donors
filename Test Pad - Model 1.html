@@ -13182,7 +13182,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;fully_processed_data.csv&quot;</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">2000</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;fully_processed_data.csv&quot;</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
@@ -13245,8 +13245,8 @@ div#notebook {
       <td>grades_prek_2</td>
       <td>0</td>
       <td>0</td>
-      <td>literacy_language</td>
-      <td>esl_literacy</td>
+      <td>literacy language</td>
+      <td>esl literacy</td>
       <td>students english learners working english seco...</td>
       <td>educational support english learners home</td>
       <td>154.6</td>
@@ -13263,8 +13263,8 @@ div#notebook {
       <td>grades_6_8</td>
       <td>7</td>
       <td>1</td>
-      <td>history_civics_health_sports</td>
-      <td>civics_government_teamsports</td>
+      <td>history civics health sports</td>
+      <td>civics government team sports</td>
       <td>students arrive school eager learn polite gene...</td>
       <td>wanted projector hungry learners</td>
       <td>299.0</td>
@@ -13293,7 +13293,7 @@ div#notebook {
 
 <span class="n">X</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;project_is_approved&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;project_is_approved&#39;</span><span class="p">]</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="k">del</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 
@@ -13359,7 +13359,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>9807
+<pre>51537
 </pre>
 </div>
 </div>
@@ -13395,7 +13395,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>284
+<pre>320
 </pre>
 </div>
 </div>
@@ -13429,13 +13429,13 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[   1  157 1965 ...    0    0    0]
- [   4  194   55 ...    0    0    0]
- [   2   82    2 ...    0    0    0]
+<pre>[[  41  100  170 ...    0    0    0]
+ [ 538  489 3840 ...    0    0    0]
+ [ 173   72  651 ...    0    0    0]
  ...
- [  11  102    2 ...    0    0    0]
- [   1 1139   27 ...    0    0    0]
- [  44    2  337 ...    0    0    0]]
+ [   1   86  534 ...    0    0    0]
+ [ 788 4659    4 ...    0    0    0]
+ [5403 8112 9655 ...    0    0    0]]
 </pre>
 </div>
 </div>
@@ -13486,7 +13486,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 9806/9806 [00:00&lt;00:00, 193552.59it/s]</pre>
+<pre>100%|██████████| 51536/51536 [00:00&lt;00:00, 284795.32it/s]</pre>
 </div>
 </div>
 
@@ -13497,7 +13497,7 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Loaded 400000 word vectors.
-9807
+51537
 300
 </pre>
 </div>
@@ -13605,7 +13605,7 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>8198
+<pre>30232
 </pre>
 </div>
 </div>
@@ -13638,13 +13638,13 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[   1   13   71 ...    0    0    0]
- [  84   10   21 ...    0    0    0]
- [   1 1470  447 ...    0    0    0]
+<pre>[[   1  592  460 ...    0    0    0]
+ [  68   78  122 ...    0    0    0]
+ [ 170    5    6 ...    0    0    0]
  ...
- [   1  545  103 ...    0    0    0]
- [ 367   25  134 ...    0    0    0]
- [2582  470  436 ...    0    0    0]]
+ [   1 1188    6 ...    0    0    0]
+ [   2  670  260 ...    0    0    0]
+ [  63   31    1 ...    0    0    0]]
 </pre>
 </div>
 </div>
@@ -13709,7 +13709,7 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>51
+<pre>52
 </pre>
 </div>
 </div>
@@ -13835,7 +13835,7 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>51
+<pre>52
 </pre>
 </div>
 </div>
@@ -13985,12 +13985,12 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[1 6 7 ... 0 0 0]
- [1 8 9 ... 0 0 0]
+<pre>[[1 4 5 ... 0 0 0]
+ [1 4 5 ... 0 0 0]
  [1 4 5 ... 0 0 0]
  ...
- [1 4 5 ... 0 0 0]
  [1 2 3 ... 0 0 0]
+ [1 4 5 ... 0 0 0]
  [1 2 3 ... 0 0 0]]
 </pre>
 </div>
@@ -14099,13 +14099,13 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[1 4 5 ... 0 0 0]
- [1 6 7 ... 0 0 0]
- [1 2 3 ... 0 0 0]
+<pre>[[1 2 3 ... 0 0 0]
+ [1 4 5 ... 0 0 0]
+ [1 4 5 ... 0 0 0]
  ...
  [1 4 5 ... 0 0 0]
  [1 6 7 ... 0 0 0]
- [1 8 9 ... 0 0 0]]
+ [1 2 3 ... 0 0 0]]
 </pre>
 </div>
 </div>
@@ -14170,7 +14170,7 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>16
+<pre>18
 </pre>
 </div>
 </div>
@@ -14240,13 +14240,13 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[ 5  6  8  0  0]
- [ 3  4  0  0  0]
- [ 9 10  0  0  0]
+<pre>[[1 2 0 0 0]
+ [5 6 0 0 0]
+ [1 2 3 4 0]
  ...
- [ 1  2 11 12  0]
- [ 3  4  0  0  0]
- [ 3  4  1  2  0]]
+ [3 4 0 0 0]
+ [3 4 0 0 0]
+ [1 2 3 4 0]]
 </pre>
 </div>
 </div>
@@ -14320,7 +14320,7 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>16
+<pre>18
 </pre>
 </div>
 </div>
@@ -14354,13 +14354,13 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[ 9 10  0  0  0]
- [ 5  6  0  0  0]
- [11 12  0  0  0]
+<pre>[[ 1  2 11 12  0]
+ [ 1  2  3  4  0]
+ [ 7  8  0  0  0]
  ...
- [ 7  0  0  0  0]
- [ 8  3  4  0  0]
- [ 1  2  9 10  0]]
+ [ 5  6  0  0  0]
+ [ 5  6  0  0  0]
+ [ 1  2  0  0  0]]
 </pre>
 </div>
 </div>
@@ -14425,7 +14425,7 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>38
+<pre>49
 </pre>
 </div>
 </div>
@@ -14461,7 +14461,7 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>4
+<pre>6
 </pre>
 </div>
 </div>
@@ -14495,13 +14495,13 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[ 5  8  7  0]
- [ 6  2  0  0]
- [10  0  0  0]
+<pre>[[ 1  3  4  0  0  0]
+ [ 5 10  0  0  0  0]
+ [ 3  4  2  0  0  0]
  ...
- [ 3  4 24  0]
- [ 5 11  0  0]
- [ 6  1  0  0]]
+ [ 9  8  2  0  0  0]
+ [ 5 20 11  2  0  0]
+ [ 1  2  0  0  0  0]]
 </pre>
 </div>
 </div>
@@ -14575,7 +14575,7 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>38
+<pre>49
 </pre>
 </div>
 </div>
@@ -14609,13 +14609,13 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[13  0  0  0]
- [ 5  7  0  0]
- [23  0  0  0]
+<pre>[[ 1 13 12  0  0  0]
+ [ 3  4  2  0  0  0]
+ [ 6  7  0  0  0  0]
  ...
- [ 6  0  0  0]
- [21  2  0  0]
- [ 3  4 13  0]]
+ [ 5 10 34 21  0  0]
+ [ 5 10  0  0  0  0]
+ [ 1  3  4  0  0  0]]
 </pre>
 </div>
 </div>
@@ -14680,7 +14680,7 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>5
+<pre>6
 </pre>
 </div>
 </div>
@@ -14806,7 +14806,7 @@ Colocations handled automatically by placer.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>5
+<pre>6
 </pre>
 </div>
 </div>
@@ -14894,34 +14894,34 @@ Colocations handled automatically by placer.
   </thead>
   <tbody>
     <tr>
-      <th>798</th>
+      <th>6013</th>
       <td>0</td>
       <td>0</td>
-      <td>0.033663</td>
+      <td>0.024906</td>
     </tr>
     <tr>
-      <th>1102</th>
-      <td>2</td>
+      <th>12257</th>
+      <td>14</td>
+      <td>0</td>
+      <td>0.012119</td>
+    </tr>
+    <tr>
+      <th>15921</th>
       <td>1</td>
-      <td>0.019798</td>
+      <td>0</td>
+      <td>0.013512</td>
     </tr>
     <tr>
-      <th>105</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0.141451</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>21</td>
-      <td>0</td>
-      <td>0.065830</td>
-    </tr>
-    <tr>
-      <th>1995</th>
-      <td>0</td>
+      <th>61791</th>
       <td>1</td>
-      <td>0.006381</td>
+      <td>0</td>
+      <td>0.003934</td>
+    </tr>
+    <tr>
+      <th>99000</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0.014935</td>
     </tr>
   </tbody>
 </table>
@@ -15005,34 +15005,34 @@ Colocations handled automatically by placer.
   </thead>
   <tbody>
     <tr>
-      <th>1860</th>
-      <td>1</td>
-      <td>0</td>
-      <td>0.004942</td>
-    </tr>
-    <tr>
-      <th>353</th>
-      <td>1</td>
-      <td>0</td>
-      <td>0.007418</td>
-    </tr>
-    <tr>
-      <th>1333</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0.045082</td>
-    </tr>
-    <tr>
-      <th>905</th>
-      <td>6</td>
-      <td>1</td>
-      <td>0.013559</td>
-    </tr>
-    <tr>
-      <th>1289</th>
+      <th>60773</th>
       <td>2</td>
       <td>0</td>
-      <td>0.011934</td>
+      <td>0.079946</td>
+    </tr>
+    <tr>
+      <th>49967</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0.014935</td>
+    </tr>
+    <tr>
+      <th>45133</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0.037735</td>
+    </tr>
+    <tr>
+      <th>106907</th>
+      <td>26</td>
+      <td>1</td>
+      <td>0.010642</td>
+    </tr>
+    <tr>
+      <th>100838</th>
+      <td>3</td>
+      <td>0</td>
+      <td>0.011325</td>
     </tr>
   </tbody>
 </table>
@@ -15064,7 +15064,7 @@ Colocations handled automatically by placer.
 <span class="n">x</span> <span class="o">=</span> <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.3</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
 
-<span class="n">output</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;sigmoid&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;output&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;output1&#39;</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -15092,17 +15092,129 @@ Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Defining-a-custom-metric-AUC">Defining a custom metric AUC<a class="anchor-link" href="#Defining-a-custom-metric-AUC">&#182;</a></h3>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">#https://datascience.stackexchange.com/questions/13746/how-to-define-a-custom-performance-metric-in-keras/20192#20192</span>
+<span class="sd">import keras</span>
+<span class="sd">import numpy as np</span>
+<span class="sd">import sklearn.metrics as sklm</span>
+
+
+<span class="sd">class Metrics(keras.callbacks.Callback):</span>
+<span class="sd">    def on_train_begin(self, logs={}):</span>
+<span class="sd">        self.auc = []</span>
+
+<span class="sd">    def on_epoch_end(self, epoch, logs={}):</span>
+<span class="sd">        score = np.asarray(self.model.predict(self.validation_data[0]))</span>
+<span class="sd">        print(&quot;Score:&quot;, score)</span>
+<span class="sd">        predict = np.round(np.asarray(self.model.predict(self.validation_data[0])))</span>
+<span class="sd">        print(&quot;predict:&quot;, predict)</span>
+<span class="sd">        targ = self.validation_data[1]</span>
+
+<span class="sd">        self.auc.append(sklm.roc_auc_score(targ, predict))</span>
+<span class="sd">        return</span>
+<span class="sd">    </span>
+<span class="sd">metrics = Metrics()</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[57]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\n#https://datascience.stackexchange.com/questions/13746/how-to-define-a-custom-performance-metric-in-keras/20192#20192\nimport keras\nimport numpy as np\nimport sklearn.metrics as sklm\n\n\nclass Metrics(keras.callbacks.Callback):\n    def on_train_begin(self, logs={}):\n        self.auc = []\n\n    def on_epoch_end(self, epoch, logs={}):\n        score = np.asarray(self.model.predict(self.validation_data[0]))\n        print(&#34;Score:&#34;, score)\n        predict = np.round(np.asarray(self.model.predict(self.validation_data[0])))\n        print(&#34;predict:&#34;, predict)\n        targ = self.validation_data[1]\n\n        self.auc.append(sklm.roc_auc_score(targ, predict))\n        return\n    \nmetrics = Metrics()\n&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">metrics</span> <span class="k">as</span> <span class="n">sklm</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="k">def</span> <span class="nf">auc_roc</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">py_func</span><span class="p">(</span><span class="n">sklm</span><span class="o">.</span><span class="n">roc_auc_score</span><span class="p">,</span> <span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="n">tf</span><span class="o">.</span><span class="n">double</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">pass</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Defining-a-TensorBoard-callback-object">Defining a TensorBoard callback object<a class="anchor-link" href="#Defining-a-TensorBoard-callback-object">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">time</span>
+<span class="kn">from</span> <span class="nn">tensorflow.python.keras.callbacks</span> <span class="k">import</span> <span class="n">TensorBoard</span>
+<span class="n">tensorboard</span> <span class="o">=</span> <span class="n">TensorBoard</span><span class="p">(</span><span class="n">log_dir</span><span class="o">=</span><span class="s2">&quot;logs/</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Compiling-the-final-model">Compiling the final model<a class="anchor-link" href="#Compiling-the-final-model">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">input_layer1</span><span class="p">,</span><span class="n">input_layer2</span><span class="p">,</span><span class="n">input_layer3</span><span class="p">,</span><span class="n">input_layer4</span><span class="p">,</span><span class="n">input_layer5</span><span class="p">,</span><span class="n">input_layer6</span><span class="p">,</span><span class="n">input_layer7</span><span class="p">],</span> <span class="n">outputs</span><span class="o">=</span><span class="n">output</span><span class="p">)</span>
-<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span><span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s1">&#39;sgd&#39;</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">,</span><span class="n">auc_roc</span><span class="p">])</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">padded_docs_essay_train</span><span class="p">,</span> <span class="n">padded_docs_school_state_train</span><span class="p">,</span> <span class="n">padded_docs_project_grade_category_train</span><span class="p">,</span> <span class="n">padded_docs_clean_categories_train</span><span class="p">,</span> <span class="n">padded_docs_clean_subcategories_train</span><span class="p">,</span> <span class="n">padded_docs_teacher_prefix_train</span><span class="p">,</span> <span class="n">numerical_df_train</span><span class="p">],</span> 
           <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="n">labels_train</span><span class="p">],</span>
           <span class="n">validation_data</span><span class="o">=</span><span class="p">([</span><span class="n">padded_docs_essay_test</span><span class="p">,</span> <span class="n">padded_docs_school_state_test</span><span class="p">,</span> <span class="n">padded_docs_project_grade_category_test</span><span class="p">,</span> <span class="n">padded_docs_clean_categories_test</span><span class="p">,</span> <span class="n">padded_docs_clean_subcategories_test</span><span class="p">,</span> <span class="n">padded_docs_teacher_prefix_test</span><span class="p">,</span> <span class="n">numerical_df_test</span><span class="p">],[</span><span class="n">labels_test</span><span class="p">]),</span>
-          <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span>
+          <span class="n">epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> 
+          <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> 
+          <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">tensorboard</span><span class="p">])</span>
 </pre></div>
 
     </div>
@@ -15119,40 +15231,52 @@ Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 1200 samples, validate on 800 samples
+<pre>WARNING:tensorflow:From &lt;ipython-input-58-db88660b5ed6&gt;:5: py_func (from tensorflow.python.ops.script_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+tf.py_func is deprecated in TF V2. Instead, use
+    tf.py_function, which takes a python function which manipulates tf eager
+    tensors instead of numpy arrays. It&#39;s easy to convert a tf eager tensor to
+    an ndarray (just call tensor.numpy()) but having access to eager tensors
+    means `tf.py_function`s can use accelerators such as GPUs as well as
+    being differentiable using a gradient tape.
+    
+WARNING:tensorflow:From /root/anaconda3/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+Train on 87398 samples, validate on 21850 samples
 Epoch 1/10
-1200/1200 [==============================] - 16s 13ms/step - loss: 0.0142 - acc: 0.9975 - val_loss: 1.4685 - val_acc: 0.8000
+87398/87398 [==============================] - 537s 6ms/step - loss: 2.4140 - acc: 0.8486 - auc_roc: 0.5000 - val_loss: 2.4136 - val_acc: 0.8486 - val_auc_roc: 0.5000
 Epoch 2/10
-1200/1200 [==============================] - 13s 11ms/step - loss: 0.0119 - acc: 0.9967 - val_loss: 1.7526 - val_acc: 0.7300
+87398/87398 [==============================] - 544s 6ms/step - loss: 2.4140 - acc: 0.8486 - auc_roc: 0.5000 - val_loss: 2.4136 - val_acc: 0.8486 - val_auc_roc: 0.5000
 Epoch 3/10
-1200/1200 [==============================] - 13s 11ms/step - loss: 0.0076 - acc: 0.9992 - val_loss: 1.8184 - val_acc: 0.7500
+87398/87398 [==============================] - 563s 6ms/step - loss: 2.4140 - acc: 0.8486 - auc_roc: 0.5000 - val_loss: 2.4136 - val_acc: 0.8486 - val_auc_roc: 0.5000
 Epoch 4/10
-1200/1200 [==============================] - 13s 11ms/step - loss: 0.0243 - acc: 0.9892 - val_loss: 1.6837 - val_acc: 0.6325
+87398/87398 [==============================] - 565s 6ms/step - loss: 2.4140 - acc: 0.8486 - auc_roc: 0.5000 - val_loss: 2.4136 - val_acc: 0.8486 - val_auc_roc: 0.5000
 Epoch 5/10
-1200/1200 [==============================] - 13s 11ms/step - loss: 0.0422 - acc: 0.9842 - val_loss: 1.5526 - val_acc: 0.7863
+87398/87398 [==============================] - 564s 6ms/step - loss: 2.4140 - acc: 0.8486 - auc_roc: 0.5000 - val_loss: 2.4136 - val_acc: 0.8486 - val_auc_roc: 0.5000
 Epoch 6/10
-1200/1200 [==============================] - 13s 11ms/step - loss: 0.0374 - acc: 0.9858 - val_loss: 1.4161 - val_acc: 0.7588
+87398/87398 [==============================] - 567s 6ms/step - loss: 2.4140 - acc: 0.8486 - auc_roc: 0.5000 - val_loss: 2.4136 - val_acc: 0.8486 - val_auc_roc: 0.5000
 Epoch 7/10
-1200/1200 [==============================] - 13s 11ms/step - loss: 0.0093 - acc: 0.9958 - val_loss: 1.5148 - val_acc: 0.8125
+87398/87398 [==============================] - 567s 6ms/step - loss: 2.4140 - acc: 0.8486 - auc_roc: 0.5000 - val_loss: 2.4136 - val_acc: 0.8486 - val_auc_roc: 0.5000
 Epoch 8/10
-1200/1200 [==============================] - 14s 11ms/step - loss: 0.0041 - acc: 0.9983 - val_loss: 1.5595 - val_acc: 0.7712
+87398/87398 [==============================] - 566s 6ms/step - loss: 2.4140 - acc: 0.8486 - auc_roc: 0.5000 - val_loss: 2.4136 - val_acc: 0.8486 - val_auc_roc: 0.5000
 Epoch 9/10
-1200/1200 [==============================] - 13s 11ms/step - loss: 0.0025 - acc: 0.9992 - val_loss: 1.5689 - val_acc: 0.7775
+87398/87398 [==============================] - 564s 6ms/step - loss: 2.4140 - acc: 0.8486 - auc_roc: 0.5000 - val_loss: 2.4136 - val_acc: 0.8486 - val_auc_roc: 0.5000
 Epoch 10/10
-1200/1200 [==============================] - 13s 11ms/step - loss: 0.0056 - acc: 0.9983 - val_loss: 1.5916 - val_acc: 0.7788
+87398/87398 [==============================] - 570s 7ms/step - loss: 2.4140 - acc: 0.8486 - auc_roc: 0.5000 - val_loss: 2.4136 - val_acc: 0.8486 - val_auc_roc: 0.5000
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[91]:</div>
+    <div class="prompt output_prompt">Out[60]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;keras.callbacks.History at 0x7f45776ec748&gt;</pre>
+<pre>&lt;keras.callbacks.History at 0x7f59162ca908&gt;</pre>
 </div>
 
 </div>
@@ -15163,7 +15287,187 @@ Epoch 10/10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>tensorboard --logdir<span class="o">=</span>logs/
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>W0726 23:12:59.097108 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.111174 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+W0726 23:12:59.143583 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.155557 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+W0726 23:12:59.190407 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.239963 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.255520 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+TensorBoard 1.13.1 at http://saugata:6006 (Press CTRL+C to quit)
+W0726 23:12:59.301306 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.325635 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+W0726 23:12:59.363682 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.382292 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+W0726 23:12:59.406032 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.407257 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+W0726 23:12:59.435978 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.437082 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+W0726 23:12:59.456918 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.458396 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+W0726 23:12:59.487738 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.518584 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.558245 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.563189 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+W0726 23:12:59.610628 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.615735 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+W0726 23:12:59.639674 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.641485 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+W0726 23:12:59.668507 139700309554944 plugin_event_accumulator.py:294] Found more than one graph event per run, or there was a metagraph containing a graph_def, as well as one or more graph events.  Overwriting the graph with the newest event.
+W0726 23:12:59.669562 139700309554944 plugin_event_accumulator.py:302] Found more than one metagraph event per run. Overwriting the metagraph with the newest event.
+^C
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src='screenshot.png'></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span><span class="p">,</span> <span class="n">accuracy</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">([</span><span class="n">padded_docs_essay_test</span><span class="p">,</span> <span class="n">padded_docs_school_state_test</span><span class="p">,</span> <span class="n">padded_docs_project_grade_category_test</span><span class="p">,</span> <span class="n">padded_docs_clean_categories_test</span><span class="p">,</span> <span class="n">padded_docs_clean_subcategories_test</span><span class="p">,</span> <span class="n">padded_docs_teacher_prefix_test</span><span class="p">,</span> <span class="n">numerical_df_test</span><span class="p">],</span>
+<span class="p">[</span><span class="n">labels_test</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Accuracy: </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">accuracy</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">InvalidArgumentError</span>                      Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-62-8caa044dc74d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> loss, accuracy = model.evaluate([padded_docs_essay_test, padded_docs_school_state_test, padded_docs_project_grade_category_test, padded_docs_clean_categories_test, padded_docs_clean_subcategories_test, padded_docs_teacher_prefix_test, numerical_df_test],
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> [labels_test], verbose=0)
+</span><span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Accuracy: %f&#39;</span> <span class="ansi-blue-fg">%</span> <span class="ansi-blue-fg">(</span>accuracy<span class="ansi-blue-fg">*</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.7/site-packages/keras/engine/training.py</span> in <span class="ansi-cyan-fg">evaluate</span><span class="ansi-blue-fg">(self, x, y, batch_size, verbose, sample_weight, steps)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1111</span>                                          batch_size<span class="ansi-blue-fg">=</span>batch_size<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">   1112</span>                                          verbose<span class="ansi-blue-fg">=</span>verbose<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">-&gt; 1113</span><span class="ansi-red-fg">                                          steps=steps)
+</span><span class="ansi-green-intense-fg ansi-bold">   1114</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1115</span>     def predict(self, x,
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.7/site-packages/keras/engine/training_arrays.py</span> in <span class="ansi-cyan-fg">test_loop</span><span class="ansi-blue-fg">(model, f, ins, batch_size, verbose, steps)</span>
+<span class="ansi-green-intense-fg ansi-bold">    390</span>                 ins_batch<span class="ansi-blue-fg">[</span>i<span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> ins_batch<span class="ansi-blue-fg">[</span>i<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>toarray<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    391</span> 
+<span class="ansi-green-fg">--&gt; 392</span><span class="ansi-red-fg">             </span>batch_outs <span class="ansi-blue-fg">=</span> f<span class="ansi-blue-fg">(</span>ins_batch<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    393</span>             <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>batch_outs<span class="ansi-blue-fg">,</span> list<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    394</span>                 <span class="ansi-green-fg">if</span> batch_index <span class="ansi-blue-fg">==</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, inputs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2713</span>                 <span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_legacy_call<span class="ansi-blue-fg">(</span>inputs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2714</span> 
+<span class="ansi-green-fg">-&gt; 2715</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_call<span class="ansi-blue-fg">(</span>inputs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2716</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   2717</span>             <span class="ansi-green-fg">if</span> py_any<span class="ansi-blue-fg">(</span>is_tensor<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> x <span class="ansi-green-fg">in</span> inputs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py</span> in <span class="ansi-cyan-fg">_call</span><span class="ansi-blue-fg">(self, inputs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2673</span>             fetched <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_callable_fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>array_vals<span class="ansi-blue-fg">,</span> run_metadata<span class="ansi-blue-fg">=</span>self<span class="ansi-blue-fg">.</span>run_metadata<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2674</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 2675</span><span class="ansi-red-fg">             </span>fetched <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_callable_fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>array_vals<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2676</span>         <span class="ansi-green-fg">return</span> fetched<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span>len<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>outputs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">   2677</span> 
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.7/site-packages/tensorflow/python/client/session.py</span> in <span class="ansi-cyan-fg">__call__</span><span class="ansi-blue-fg">(self, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1437</span>           ret = tf_session.TF_SessionRunCallable(
+<span class="ansi-green-intense-fg ansi-bold">   1438</span>               self<span class="ansi-blue-fg">.</span>_session<span class="ansi-blue-fg">.</span>_session<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_handle<span class="ansi-blue-fg">,</span> args<span class="ansi-blue-fg">,</span> status<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">-&gt; 1439</span><span class="ansi-red-fg">               run_metadata_ptr)
+</span><span class="ansi-green-intense-fg ansi-bold">   1440</span>         <span class="ansi-green-fg">if</span> run_metadata<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   1441</span>           proto_data <span class="ansi-blue-fg">=</span> tf_session<span class="ansi-blue-fg">.</span>TF_GetBuffer<span class="ansi-blue-fg">(</span>run_metadata_ptr<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/anaconda3/lib/python3.7/site-packages/tensorflow/python/framework/errors_impl.py</span> in <span class="ansi-cyan-fg">__exit__</span><span class="ansi-blue-fg">(self, type_arg, value_arg, traceback_arg)</span>
+<span class="ansi-green-intense-fg ansi-bold">    526</span>             <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    527</span>             compat<span class="ansi-blue-fg">.</span>as_text<span class="ansi-blue-fg">(</span>c_api<span class="ansi-blue-fg">.</span>TF_Message<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>status<span class="ansi-blue-fg">.</span>status<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-fg">--&gt; 528</span><span class="ansi-red-fg">             c_api.TF_GetCode(self.status.status))
+</span><span class="ansi-green-intense-fg ansi-bold">    529</span>     <span class="ansi-red-fg"># Delete the underlying status object from memory otherwise it stays alive</span>
+<span class="ansi-green-intense-fg ansi-bold">    530</span>     <span class="ansi-red-fg"># as there is a reference to status from this from the traceback due to</span>
+
+<span class="ansi-red-fg">InvalidArgumentError</span>: ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+Traceback (most recent call last):
+
+  File &#34;/root/anaconda3/lib/python3.7/site-packages/tensorflow/python/ops/script_ops.py&#34;, line 207, in __call__
+    ret = func(*args)
+
+  File &#34;/root/anaconda3/lib/python3.7/site-packages/sklearn/metrics/ranking.py&#34;, line 356, in roc_auc_score
+    sample_weight=sample_weight)
+
+  File &#34;/root/anaconda3/lib/python3.7/site-packages/sklearn/metrics/base.py&#34;, line 77, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+
+  File &#34;/root/anaconda3/lib/python3.7/site-packages/sklearn/metrics/ranking.py&#34;, line 324, in _binary_roc_auc_score
+    raise ValueError(&#34;Only one class present in y_true. ROC AUC score &#34;
+
+ValueError: Only one class present in y_true. ROC AUC score is not defined in that case.
+
+
+	 [[{{node metrics/auc_roc/PyFunc}}]]</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">loss</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">predictions</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="n">padded_docs_essay_test</span><span class="p">,</span> <span class="n">padded_docs_school_state_test</span><span class="p">,</span> <span class="n">padded_docs_project_grade_category_test</span><span class="p">,</span> <span class="n">padded_docs_clean_categories_test</span><span class="p">,</span> <span class="n">padded_docs_clean_subcategories_test</span><span class="p">,</span> <span class="n">padded_docs_teacher_prefix_test</span><span class="p">,</span> <span class="n">numerical_df_test</span><span class="p">])</span>
@@ -15176,7 +15480,7 @@ Epoch 10/10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">limit</span><span class="o">=</span><span class="n">predictions</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -15202,7 +15506,7 @@ Epoch 10/10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">metrics</span>
@@ -15211,26 +15515,6 @@ Epoch 10/10
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[94]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0.77875</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -15244,7 +15528,7 @@ Epoch 10/10
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[95]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">metrics</span>
@@ -15256,30 +15540,10 @@ Epoch 10/10
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[95]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>0.5375292512920624</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pdfkit</span>
@@ -15290,37 +15554,23 @@ Epoch 10/10
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Loading page (1/2)
-Warning: Failed to load file:///mnt/0AD801EDD801D7B9/Donors Assignment/LSTM-for-Donors/custom.css (ignore)
-Printing pages (2/2)                                               
-Done                                                           
-</pre>
 </div>
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">roc_auc_score</span>
+<span class="n">y_true</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="n">y_scores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">roc_auc_score</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_scores</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[60]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
+    </div>
 </div>
 </div>
 
