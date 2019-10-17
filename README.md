@@ -1,1 +1,1 @@
-# LSTM-for-Donors
+# LSTM-for-Donors (AUC obtained 75%)
